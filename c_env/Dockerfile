@@ -17,6 +17,9 @@ RUN apt install -y cpplint
 # Install Doxygen and graphviz for graphs
 RUN apt install -y doxygen graphviz
 
+# Install Cmake 
+RUN apt install -y cmake cmake-gui
+
 # Install Google Test Framework
 RUN apt install -y libgtest-dev 
 
