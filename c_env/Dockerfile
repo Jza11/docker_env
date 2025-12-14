@@ -20,6 +20,12 @@ RUN apt install -y doxygen graphviz
 # Install Cmake 
 RUN apt install -y cmake cmake-gui
 
+# Install nlohman json for C++
+RUN apt install -y nlohmann-json3-dev 
+
+# Install http server library for C++
+RUN apt install -y 	libcpp-httplib-dev 
+
 # Install Google Test Framework
 RUN apt install -y libgtest-dev 
 
@@ -29,6 +35,7 @@ RUN cd /usr/src/googletest && \
     make && \
     cp lib/*.a /usr/lib/ || \
     (mkdir -p build && cd build && cmake .. && make && cp lib/*.a /usr/lib/)
+
 
 # Make image size smaller
 RUN rm -rf /var/lib/apt/lists/*
