@@ -17,8 +17,8 @@ RUN apt install -y cpplint
 # Install Doxygen and graphviz for graphs
 RUN apt install -y doxygen graphviz
 
-# Install Cmake 
-RUN apt install -y cmake cmake-gui
+# Install CMake 
+RUN apt install -y cmake cmake-curses-gui
 
 # Install nlohman json for C++
 RUN apt install -y nlohmann-json3-dev 
